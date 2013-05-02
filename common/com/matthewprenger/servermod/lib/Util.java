@@ -1,4 +1,4 @@
-package com.matthewprenger.servermod.core;
+package com.matthewprenger.servermod.lib;
 
 import java.io.BufferedReader;
 import java.io.File;

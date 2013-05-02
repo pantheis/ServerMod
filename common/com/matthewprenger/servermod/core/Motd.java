@@ -4,7 +4,10 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 
+import com.matthewprenger.servermod.ServerMod;
 import com.matthewprenger.servermod.command.CommandMotd;
+import com.matthewprenger.servermod.lib.Reference;
+import com.matthewprenger.servermod.lib.Util;
 
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,13 +17,7 @@ import cpw.mods.fml.common.IPlayerTracker;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Motd implements IPlayerTracker {
-	private static final String defaultMotd =
-		"Hello, $PLAYER$!\n"+
-		"This is a default installation of ServerMod. In order to change\n"+
-		"this message, edit servermod/motd.txt or disable it by setting\n" +
-		"enable-motd to false in servermod/config/servermod.cfg\n"+
-		"Happy playing!";
-	;
+	
 	private String motd;
 	
 	public Motd() {
@@ -33,7 +30,7 @@ public class Motd implements IPlayerTracker {
 			
 			if (!file.exists()) {
 				PrintWriter pw = new PrintWriter(file);
-				pw.print(defaultMotd);
+				pw.print(Reference.DEFAULT_MOTD);
 				pw.close();
 			}
 			

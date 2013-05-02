@@ -2,7 +2,7 @@ package com.matthewprenger.servermod.command;
 
 import java.text.DecimalFormat;
 
-import com.matthewprenger.servermod.core.ServerMod;
+import com.matthewprenger.servermod.ServerMod;
 
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.PlayerNotFoundException;

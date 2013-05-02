@@ -1,6 +1,6 @@
 package com.matthewprenger.servermod.command;
 
-import com.matthewprenger.servermod.core.ServerMod;
+import com.matthewprenger.servermod.ServerMod;
 
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;

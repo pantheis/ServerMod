@@ -1,5 +1,6 @@
 package com.matthewprenger.servermod.core;
 
+import com.matthewprenger.servermod.ServerMod;
 import com.matthewprenger.servermod.api.CallHandler;
 import com.matthewprenger.servermod.api.provider.PastebinProvider;
 

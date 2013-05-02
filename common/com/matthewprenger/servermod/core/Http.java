@@ -11,6 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 
+import com.matthewprenger.servermod.ServerMod;
+import com.matthewprenger.servermod.lib.Reference;
+
 import cpw.mods.fml.common.Loader;
 
 import net.minecraft.util.HttpUtil;

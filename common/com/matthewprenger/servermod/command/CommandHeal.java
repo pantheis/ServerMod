@@ -1,8 +1,8 @@
 package com.matthewprenger.servermod.command;
 
+import com.matthewprenger.servermod.ServerMod;
 import com.matthewprenger.servermod.command.CommandKill.EntityDummy;
 import com.matthewprenger.servermod.command.CommandKill.ForcedDamageSource;
-import com.matthewprenger.servermod.core.ServerMod;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
