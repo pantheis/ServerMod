@@ -1,0 +1,20 @@
+[
+{
+  "modid": "ServerMod",
+  "name": "Server Mod",
+  "description": "Server administration mod forked from RichardG867",
+  "version": "1.0.0",
+  "url": "https://github.com/matthewprenger/ServerMod",
+  "updateUrl": "",
+  "authorList": [
+    "matthewprenger"
+  ],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
