@@ -1,11 +1,11 @@
 package com.matthewprenger.servermod.command;
 
-import com.matthewprenger.servermod.ServerMod;
-
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.PlayerNotFoundException;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChunkCoordinates;
+
+import com.matthewprenger.servermod.ServerMod;
 
 public class CommandSpawn extends Command {
 	public CommandSpawn() {
@@ -18,8 +18,11 @@ public class CommandSpawn extends Command {
 				
 		EntityPlayer player = (EntityPlayer)var1;
 		ChunkCoordinates point = player.worldObj.getSpawnPoint();
+		int dimid = player.dimension;
 		
-		point.posY += 1;
+		while(ServerMod.server.worldServerForDimension(dimid).getBlockId(point.posX, point.posY, point.posZ) != 0){
+		    point.posY ++;
+		}
 		
 		player.setPositionAndUpdate(point.posX, point.posY, point.posZ);
 
