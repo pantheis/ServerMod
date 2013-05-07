@@ -6,6 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.matthewprenger.servermod.core.Settings;
+import com.matthewprenger.servermod.lib.Reference;
 
 
 import net.minecraft.server.MinecraftServer;
@@ -17,7 +18,7 @@ import cpw.mods.fml.common.Mod.ServerStopping;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 
-@Mod(modid = "ServerMod|RCON", name = "ServerMod RCON", version = "1.0", dependencies = "required-after:ServerMod")
+@Mod(modid = "ServerMod|RCON", name = "ServerMod RCON", version = "1.0", dependencies = "required-after:" + Reference.MODID)
 public class Rcon {
 	@Instance("ServerMod|RCON")
 	public static Rcon instance;
