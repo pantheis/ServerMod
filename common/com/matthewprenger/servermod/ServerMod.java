@@ -23,10 +23,8 @@ import com.matthewprenger.servermod.provider.PastebinUbuntu;
 
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.ServerStarting;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 @Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.VERSION, dependencies = Reference.DEPENDENCIES)
@@ -41,15 +39,12 @@ public class ServerMod {
 	public Settings settings = new Settings(new File(new File("servermod", "config"), "servermod.cfg"), "ServerMod Core configuration file");
 	public PastebinProvider pastebin;
 	
-	@Init
-	public static void init(FMLInitializationEvent event){
-	    System.out.println("Starting ServerMod version " + Reference.VERSION + " for Minecraft " + Reference.MINECRAFT_VERSION);
-	}
-	
 	@ServerStarting
 	public void onServerStarting(FMLServerStartingEvent event) {
 		server = event.getServer();
 		log.setParent(FMLLog.getLogger());
+		
+		log.log(Level.INFO, "Starting ServerMod version " + Reference.VERSION + " for Minecraft " + Reference.MINECRAFT_VERSION);
 		
 		CallHandler.instance = new ServerModCallHandler();
 		
