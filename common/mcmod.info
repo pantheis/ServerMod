@@ -1,16 +1,16 @@
 [
 {
   "modid": "ServerMod",
-  "name": "Server Mod",
-  "description": "Server administration mod forked from RichardG867",
-  "version": "1.0.0",
-  "url": "https://github.com/matthewprenger/ServerMod",
+  "name": "ServerMod",
+  "description": "Server administration mod, originally by RichardG867",
+  "version": "@VERSION@",
+  "url": "",
   "updateUrl": "",
   "authorList": [
-    "matthewprenger"
+    "matthewprenger",
     "RichardG867"
   ],
-  "credits": "",
+  "credits": "By matthewprenger, based on RichardG867's ServerMod",
   "logoFile": "",
   "screenshots": [
   ],

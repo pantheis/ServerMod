@@ -26,7 +26,7 @@ public class Motd implements IPlayerTracker {
 		((ServerCommandManager)ServerMod.server.getCommandManager()).registerCommand(new CommandMotd(this));
 		
 		try {
-			File file = new File("servermod", "motd.txt");
+			File file = new File("config/servermod", "motd.txt");
 			
 			if (!file.exists()) {
 				PrintWriter pw = new PrintWriter(file);

@@ -36,16 +36,15 @@ public class ServerMod {
 	public static boolean firstStart = true;
 	
 	public Logger log = Logger.getLogger("ServerMod");
-	public Settings settings = new Settings(new File(new File("servermod", "config"), "servermod.cfg"), "ServerMod Core configuration file");
+	public Settings settings = new Settings(new File(new File("config","servermod"), "servermod.cfg"), "ServerMod configuration file");
+	
 	public PastebinProvider pastebin;
 	
 	@ServerStarting
 	public void onServerStarting(FMLServerStartingEvent event) {
 		server = event.getServer();
 		log.setParent(FMLLog.getLogger());
-		
-		log.log(Level.INFO, "Starting ServerMod version " + Reference.VERSION + " for Minecraft " + Reference.MINECRAFT_VERSION);
-		
+				
 		CallHandler.instance = new ServerModCallHandler();
 		
 		if (firstStart) {
@@ -57,7 +56,7 @@ public class ServerMod {
 		
 		ServerModCommands.init(event);
 		
-		settings.addSetting("provider-pastebin", "forge", "Pastebin to use as preferred. Pastebins supported by default: pastebin forge ubuntu sprunge");
+		settings.addSetting("provider-pastebin", "pastebin", "Pastebin to use as preferred. Pastebins supported by default: pastebin forge ubuntu sprunge");
         settings.addSetting("require-op-tps", false, "Require op for the /tps command");
         settings.addSetting("require-op-kill-self", false, "Require op for using /kill on yourself");
         settings.addSetting("require-op-spawn", false, "Require op for the /spawn command");
