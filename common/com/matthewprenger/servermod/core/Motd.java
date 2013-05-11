@@ -56,7 +56,7 @@ public class Motd implements IPlayerTracker {
 	
 	public void serveMotd(ICommandSender sender) {
 		for (String line : motd.split("\n")) {
-			sender.sendChatToPlayer("\u00a77"+line.replace("\r", "").replace("$PLAYER$", sender.getCommandSenderName()));
+			sender.sendChatToPlayer(line.replace("\r", "").replace("$PLAYER$", sender.getCommandSenderName()));
 		}
 	}
 }
